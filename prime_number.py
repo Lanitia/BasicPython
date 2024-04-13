@@ -5,12 +5,14 @@ b = input("bの値を入力: ")
 
 test = int(b) #この値を変更してください
 
-
-for i in range(2, int(test ** 0.5)+1) :
-    if i == int(test ** 0.5) :
+if test <= 1 :
+    print("例外です。2以上の整数を入力してください")
+elif test == 2 :
+    print("2は素数")
+else :
+    for i in range(2, int(test ** 0.5)+1) :
+        if test % i == 0 :
+            print(f"{test}は素数でない")
+            break
+    else :
         print(f"{test}は素数")
-        break
-    elif test % i == 0 :
-        print(f"{test}は素数でない")
-        print(f"{i}で割り切れる")
-        break
