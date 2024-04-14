@@ -15,10 +15,10 @@ def isPrime(n) :
         else :
             for i in range(2, int(n ** 0.5)+1) :
                 if n % i == 0 :
-                    jud = True
+                    jud = False
                     break
             else :
-                jud = False
+                jud = True
             return jud
 
 print(isPrime(a))
