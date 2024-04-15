@@ -23,3 +23,4 @@ def isPrime(n) :
 
 print(isPrime(a))
 print(isPrime(b))
+

@@ -5,3 +5,5 @@ text = """
 
 # TODO
 
+print("".join([str(len(w.strip(",").strip("."))) for w in text.split()]))
+

@@ -2,6 +2,7 @@ a = int(input("a の値を入力: "))
 b = int(input("b の値を入力: "))
 
 # TODO
+
 #問３
 def euclid(a, b) :
     a, b = max(a, b), min(a, b)
@@ -29,3 +30,4 @@ for _ in range(100000) :
         count += 1
 
 print(count / 100000)
+

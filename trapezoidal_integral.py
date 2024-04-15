@@ -1,11 +1,12 @@
 from math import sin
 from math import pi
-from math import pi
 from math import e
+
 # --example--
 # print(sin(0))
 # >>> 0
 # -----------
+
 def trapezoidal_integral(f, a=0, b=1, n=100) :
     h = (b - a) / n
     s = sum([f(a + (i - 1) * h) + f(a + i * h) for i in range(1, n+1)])    
