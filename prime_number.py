@@ -3,16 +3,24 @@ b = input("bの値を入力: ")
 
 # TODO
 
-test = int(b) #この値を変更してください
-
-if test <= 1 :
-    print("例外です。2以上の整数を入力してください")
-elif test == 2 :
-    print("2は素数")
-else :
-    for i in range(2, int(test ** 0.5)+1) :
-        if test % i == 0 :
-            print(f"{test}は素数でない")
-            break
+def isPrime(n) :
+    if str(int(n)) != n or abs(int(n)) != int(n) or int(n) == 1:
+        print("type error : unexpected type")
+        print("2以上の正の整数を入力してください")
     else :
-        print(f"{test}は素数")
+        n = int(n)
+        jud = None
+        if n == 2 :
+            return True
+        else :
+            for i in range(2, int(n ** 0.5)+1) :
+                if n % i == 0 :
+                    jud = False
+                    break
+            else :
+                jud = True
+            return jud
+
+print(isPrime(a))
+print(isPrime(b))
+
